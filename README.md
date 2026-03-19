@@ -52,3 +52,18 @@ project_root/
 │       └── SampleB_R2.trim.fq.gz
 │
 └── results/                                    # Generated automatically
+
+
+## Post-processing (Matrix Generation)
+
+After variant annotation, you can use the provided Python script to merge individual sample results into a unified matrix:
+
+### Requirements
+* Python 3.x
+* Pandas (`pip install pandas`)
+
+### Execution
+The script `merge_variants.py` will look for `*.out` files in the `results/` directory and generate consolidated CSV matrices for Allele Frequency (AF), Gene names, Codon changes, and Amino Acid variations.
+
+```bash
+python3 merge_variants.py
