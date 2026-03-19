@@ -67,3 +67,18 @@ The script `merge_variants.py` will look for `*.out` files in the `results/` dir
 
 ```bash
 python3 merge_variants.py
+
+
+## Evolutionary Analysis (Parallel Evolution)
+
+The script `analyze_parallel_evolution.py` combines mutation data with annotation matrices to identify genes under strong selection pressure.
+
+### Features
+* Integrates Codon and Amino Acid change information.
+* Calculates a **Selection Score** based on founder groups, replicate hits, and total SNP count.
+* Generates ranking tables for both **Gene** and **AA-residue** levels.
+* Produces visualization plots for top candidates.
+
+### Usage
+```bash
+python3 analyze_parallel_evolution.py -i [INPUT_DIR] -m [MATRIX_DIR] -o [OUTPUT_DIR]
